@@ -3,20 +3,29 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Desktop from './components/Desktop';
 
 function App() {
-  const [ data, setData ] = useState(null);
+  // const [ data, setData ] = useState(null);
   
-  useEffect(() => {
-		fetch("<TODO: insert api url here>")
-		.then(res => res.json())
-		.then(res => setData(res.data['article.aml']))
-  }, [])
+  // useEffect(() => {
+	// 	fetch("<TODO: insert api url here>")
+	// 	.then(res => res.json())
+	// 	.then(res => setData(res.data['article.aml']))
+  // }, [])
 
-  return data && (
+  // return data && (
+  //   <div className="App">
+  //     <Header/>
+  //     Hello Daily Bruin!
+  //     <Footer/>
+  //   </div>
+  // );
+
+  return (
     <div className="App">
       <Header/>
-      Hello Daily Bruin!
+      <Desktop/>
       <Footer/>
     </div>
   );
