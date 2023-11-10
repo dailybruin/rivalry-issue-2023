@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Desktop from './components/Desktop';
+import Field from './components/Field';
 
 function App() {
   // const [ data, setData ] = useState(null);
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-        <Desktop/>
+      <Field/>
       <Footer/>
     </div>
   );

@@ -25,16 +25,16 @@ const CardContainer = styled.div`
     align-items: center;
 
     position: absolute;
-    aspect-ratio: 14 / 9;
+    aspect-ratio: 4 / 3;
     left: ${(props) => (props.index % 2) ? 55 : 5}%;
-    top: ${(props) => ((props.index > 3) ? props.index * 9 + 18 : props.index * 9 + 10)}%; /* Adjust to your desired vertical position */
+    top: ${(props) => ((props.index > 3) ? props.index * 9 + 17 : props.index * 9 + 10)}%;
     z-index: 1;
 `;
 
 
 
 const Desktop = (props) => {
-
+    // const articles = props.articles;
     const articles = [1,2,3,4,5,6,7,8];
 
     return (
@@ -46,7 +46,7 @@ const Desktop = (props) => {
 
             {articles.map((element, index) => (
                 <CardContainer element={element} index={index}>
-                    <h2>pass article cards components in {'{element}'}</h2>
+                    <h2>pass in articles through props</h2>
                 </CardContainer>
             ))}
 
