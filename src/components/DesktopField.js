@@ -26,9 +26,9 @@ const CardContainer = styled.div`
     align-items: center;
 
     position: absolute;
-    aspect-ratio: 8 / 5;
+    aspect-ratio: 4 / 3;
     left: ${(props) => (props.index % 2) ? 40 : 5}%;
-    top: ${(props) => ((props.index > 3) ? props.index * 10 + 10 : props.index * 10 + 5)}%;
+    top: ${(props) => ((props.index > 3) ? props.index * 8.5 + 16 : props.index * 10 + 5)}%;
     z-index: 1;
 `;
 
@@ -42,7 +42,7 @@ const Desktop = (props) => {
 
             {props.articles.map((element, index) => (
                 <CardContainer element={element} index={index}>
-                    {index % 2 == 0 ? <LeftPlayerCard article={element}/> : <RightPlayerCard article={element}/>}
+                    {index % 2 == 0 ? <LeftPlayerCard article={element} index={index}/> : <RightPlayerCard article={element} index={index}/>}
                 </CardContainer>
             ))}
 

@@ -43,7 +43,7 @@ const Mobile = (props) => {
 
             {props.articles.map((element, index) => (
                 <CardContainer element={element} index={index}>
-                    <PlayerCard article={element}/>
+                    <PlayerCard article={element} index={index}/>
                 </CardContainer>
             ))}
 

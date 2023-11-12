@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import players from '../images/players/index'
 
 const CardContainer = styled.div`
     height: 100%;
@@ -6,40 +7,15 @@ const CardContainer = styled.div`
     border: 10px solid red;
     display: flex;
 
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
 `
 
-// const TextBox = styled.div`
-//     position: relative;
-//     height: 30%;
-//     width: 60%;
-//     border-radius: 40px;
-//     padding: 5%;
-//     right: 5%;
-//     top: 45%;
-
-//     border: 9px solid #F8CC46;
-//     border-image: linear-gradient(to bottom, #F8CC46, #C99700) 1;
-//     border-radius: 40px;
-
-//     background: linear-gradient(to bottom, #3C74A9 20%, #4285C3 45%, #134C82 90%);
-
-//     text-align: left;
-
-//     font-family: 'Roboto Condensed';
-//     font-size: 24px;
-//     font-weight: 800;
-//     color: white;
-// `
-
-
 const TextBox = styled.div`
-    height: 35%;
+    height: 30%;
     width: 70%;
-    padding: 5%;
-    right: 5%;
-    top: 45%;
+    left: 30%;
+    top: 40%;
 
     --border-width: 10px;
     border-radius: 40px;
@@ -47,7 +23,8 @@ const TextBox = styled.div`
     background: linear-gradient(to bottom, #3C74A9 20%, #4285C3 45%, #134C82 90%);
     position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 4%;
+    padding-left: 13%;
     box-sizing: border-box;
 
     text-align: left;
@@ -66,10 +43,23 @@ const TextBox = styled.div`
     bottom: calc(0px - var(--border-width));
     right: calc(0px - var(--border-width));
     position: absolute;
-    z-index:-1;
+    z-index: -1;
 }
 `
 
+const PlayerContainer = styled.div`
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    border: 5px blue solid;
+    left: 0;
+`
+
+const PlayerImage = styled.img`
+    height: 100%;
+    z-index: 2;
+    position: relative;
+`;
 
 const PlayerCard = (props) => {
     const title = props.article.article_title;
@@ -80,6 +70,9 @@ const PlayerCard = (props) => {
 
     return (
         <CardContainer>
+            <PlayerContainer>
+                <PlayerImage src={players[props.index]}/>
+            </PlayerContainer>
             <TextBox>{title} {byline}</TextBox>
         </CardContainer>
     )
