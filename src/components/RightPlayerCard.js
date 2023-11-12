@@ -6,16 +6,18 @@ const CardContainer = styled.div`
     border: 10px solid red;
     display: flex;
 
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
 `
 
 const TextBox = styled.div`
     position: relative;
     height: 30%;
-    width: 50%;
+    width: 60%;
+    border-radius: 40px;
     padding: 5%;
-    right: 5%;
+    left: 5%;
+    top: 35%;
 
     border: 10px solid #F8CC46;
     border-radius: 40px;
