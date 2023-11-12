@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import mobile_field_img from '../images/mobile_field_image.png'
+import PlayerCard from './LeftPlayerCard';
 
 const ImageContainer = styled.div`
     background-color: #5A8124;
+    display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -15,8 +18,7 @@ const FieldImage = styled.img`
 `;
 
 const CardContainer = styled.div`
-    width: 40%;
-    border: 20px solid red;
+    width: 80%;
     z-index: 2;
 
     display: flex;
@@ -24,22 +26,26 @@ const CardContainer = styled.div`
     align-items: center;
 
     position: absolute;
-    aspect-ratio: 14 / 9;
-    left: ${(props) => (props.index % 2) ? 55 : 5}%;
-    top: ${(props) => ((props.index > 3) ? props.index * 9 + 17 : props.index * 9 + 10)}%;
+    aspect-ratio: 3 / 4;
+    top: ${(props) => {
+        return (props.index > 3) ? props.index * 11 + 9 : props.index * 11 + 7
+    }}%;
     z-index: 1;
 `;
 
 
 
 const Mobile = (props) => {
-    // const articles = props.articles;
-    const articles = [1,2,3,4,5,6,7,8];
-
     return (
         <ImageContainer>
 
-            <h1>TODO: Mobile Version</h1>
+            <FieldImage src={mobile_field_img} />
+
+            {props.articles.map((element, index) => (
+                <CardContainer element={element} index={index}>
+                    <PlayerCard articles={props.articles}/>
+                </CardContainer>
+            ))}
 
         </ImageContainer>
     )

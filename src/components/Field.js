@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Mobile from './MobileField';
 import Desktop from './DesktopField';
 
-const Field = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+const Field = (props) => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 800);
+            setIsMobile(window.innerWidth < 700);
         };
         window.addEventListener('resize', handleResize);
         return () => {
@@ -17,7 +17,7 @@ const Field = () => {
 
     return (
         <div>
-            {isMobile ? <Mobile /> : <Desktop />}
+            {isMobile ? <Mobile articles={props.articles}/> : <Desktop articles={props.articles}/>}
         </div>
     );
 };
