@@ -4,6 +4,8 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Field from './components/Field';
+import FirstFieldGoal from "./components/FirstFieldGoal";
+import SecondFieldGoal from "./components/SecondFieldGoal";
 
 function App() {
   // const [ data, setData ] = useState(null);
@@ -36,7 +38,9 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Field articles={testdata}/>
+      <FirstFieldGoal/>
+      <Field/>
+      <SecondFieldGoal/>
       <Footer/>
     </div>
   );
