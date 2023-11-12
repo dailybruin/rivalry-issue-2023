@@ -39,7 +39,7 @@ function App() {
     <div className="App">
       <Header/>
       <FirstFieldGoal/>
-      <Field/>
+      <Field articles={testdata}/>
       <SecondFieldGoal/>
       <Footer/>
     </div>
