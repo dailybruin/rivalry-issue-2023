@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import mobile_field_img from '../images/mobile_field_image.png'
-import PlayerCard from './LeftPlayerCard';
+import MobilePlayerCard from './MobilePlayerCard';
 
 const ImageContainer = styled.div`
     background-color: #5A8124;
@@ -43,7 +43,7 @@ const Mobile = (props) => {
 
             {props.articles.map((element, index) => (
                 <CardContainer element={element} index={index}>
-                    <PlayerCard article={element} index={index}/>
+                    <MobilePlayerCard article={element} index={index}/>
                 </CardContainer>
             ))}
 
