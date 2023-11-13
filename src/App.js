@@ -11,14 +11,14 @@ function App() {
   // const [ data, setData ] = useState(null);
 
   const testdata = [
-    {article_title: "Article 1", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"},
-    {article_title: "Article 2", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"},
-    {article_title: "Article 3", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"},
-    {article_title: "Article 4", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"},
-    {article_title: "Article 5", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"},
-    {article_title: "Article 6", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"},
-    {article_title: "Article 7", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"},
-    {article_title: "Article 8", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words"}
+    {article_title: "Article 1", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+    {article_title: "Article 2", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: ""},
+    {article_title: "Article 3", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+    {article_title: "Article 4", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+    {article_title: "Article 5", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+    {article_title: "Article 6", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+    {article_title: "Article 7", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+    {article_title: "Article 8", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"}
   ]
   
   // useEffect(() => {

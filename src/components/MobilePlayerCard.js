@@ -15,8 +15,8 @@ const CardContainer = styled.div`
 const TextBox = styled.div`
     height: 100%;
     width: 100%;
-    --border-width: 5px;
-    --border-radius: 25px;
+    --border-width: 0.8vw;
+    --border-radius: 2.5vw;
     border-radius: var(--border-radius);
 
     background: linear-gradient(to bottom, #3C74A9 20%, #4285C3 45%, #134C82 90%);
@@ -36,10 +36,10 @@ const TextBox = styled.div`
         border-radius: calc(var(--border-radius) + var(--border-width));
         content: '';
         background-image: linear-gradient(to bottom, #F8CC46, #C99700);
-        top: calc(0px - var(--border-width));
-        left: calc(0px - var(--border-width));
-        bottom: calc(0px - var(--border-width));
-        right: calc(0px - var(--border-width));
+        top: calc(0vw - var(--border-width));
+        left: calc(0vw - var(--border-width));
+        bottom: calc(0vw - var(--border-width));
+        right: calc(0vw - var(--border-width));
         position: absolute;
         z-index: -1;
     }

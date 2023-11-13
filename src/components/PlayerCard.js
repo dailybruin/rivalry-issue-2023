@@ -14,8 +14,8 @@ const CardContainer = styled.div`
 const TextBox = styled.div`
     height: 100%;
     width: 100%;
-    --border-width: 10px;
-    --border-radius: 25px;
+    --border-width: 0.8vw;
+    --border-radius: 2.5vw;
     border-radius: var(--border-radius);
 
     background: linear-gradient(to bottom, #3C74A9 20%, #4285C3 45%, #134C82 90%);
@@ -27,7 +27,7 @@ const TextBox = styled.div`
     text-align: left;
 
     font-family: 'Roboto Condensed';
-    font-size: 24px;
+    font-size: 1.7vw;
     font-weight: 900;
     color: white;
 
@@ -35,10 +35,10 @@ const TextBox = styled.div`
         border-radius: calc(var(--border-radius) + var(--border-width));
         content: '';
         background-image: linear-gradient(to bottom, #F8CC46, #C99700);
-        top: calc(0px - var(--border-width));
-        left: calc(0px - var(--border-width));
-        bottom: calc(0px - var(--border-width));
-        right: calc(0px - var(--border-width));
+        top: calc(0vw - var(--border-width));
+        left: calc(0vw - var(--border-width));
+        bottom: calc(0vw - var(--border-width));
+        right: calc(0vw - var(--border-width));
         position: absolute;
         z-index: -1;
     }
@@ -62,14 +62,11 @@ const PlayerContainer = styled.div`
     /* border: 5px blue solid; */
 `
 
-///////////////////////
-// Left
-///////////////////////
-
 const LeftPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
+    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -78,21 +75,21 @@ const LeftPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '62%', left: '28%', top: '40%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingLeft: '22%' }} href={url}>{title} {byline}</TextBox>
+                    <TextBox style={{ paddingLeft: '22%' }}>
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
+                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                    </TextBox>
                 </a>
             </TextContainer>
         </CardContainer>
     )
 }
 
-///////////////////////
-// Right
-///////////////////////
-
 const RightPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
+    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -101,21 +98,21 @@ const RightPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '62%', left: '15%', top: '30%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingRight: '15%' }} href={url}>{title} {byline}</TextBox>
+                    <TextBox style={{ paddingRight: '15%' }}>
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
+                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                    </TextBox>
                 </a>
             </TextContainer>
         </CardContainer>
     )
 }
 
-///////////////////////
-// First
-///////////////////////
-
 const FirstPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
+    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -124,21 +121,22 @@ const FirstPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '70%', left: '10%', top: '30%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingRight: '20%' }}>{title} {byline}</TextBox>
+                    <TextBox style={{ paddingRight: '20%' }}>
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
+                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                    </TextBox>
+                    
                 </a>
             </TextContainer>
         </CardContainer>
     )
 }
 
-///////////////////////
-// Second
-///////////////////////
-
 const SecondPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
+    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -147,7 +145,10 @@ const SecondPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '60%', left: '30%', top: '35%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingLeft: '20%' }}>{title} {byline}</TextBox>
+                    <TextBox style={{ paddingLeft: '20%' }}>
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
+                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                    </TextBox>
                 </a>
             </TextContainer>
         </CardContainer>
