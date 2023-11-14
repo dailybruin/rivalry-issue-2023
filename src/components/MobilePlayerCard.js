@@ -28,7 +28,7 @@ const TextBox = styled.div`
     text-align: left;
 
     font-family: 'Roboto Condensed';
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 700;
     color: white;
 
@@ -72,18 +72,127 @@ const MobilePlayerCard = (props) => {
     const url = props.article.article_url;
     const byline = props.article.article_byline;
 
-    return (
-        <CardContainer>
-            <PlayerContainer style={{ left: '5%', height: '80%', bottom: '0%' }}>
-                <PlayerImage src={players[props.index]} />
-            </PlayerContainer>
-            <TextContainer style={{ height: '80%', width: '60%', left: '30%', top: '35%' }}>
-                <a href={url}>
-                    <TextBox style={{ paddingLeft: '20%' }}><b>{title} {byline}</b></TextBox>
-                </a>
-            </TextContainer>
-        </CardContainer>
-    )
+    var idx = props.index;
+
+    switch (idx) {
+        case 0:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ left: '23%', height: '85%', bottom: '36%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '30%', width: '92%', left: '4%', top: '57%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '5%', paddingTop: '10%' }}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        case 1: 
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ right: '66%', height: '75%', top: '38%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '30%', width: '85%', left: '23%', top: '40%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '23%' }}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        case 2:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ right: '73%', height: '85%', top: '0%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '35%', width: '85%', left: '18%', top: '30%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '20%' }}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        case 3:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ left: '37%', height: '100%', bottom: '0%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '48%', width: '85%', right: '7%', top: '17%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '7%' , paddingRight: '30%', paddingTop: '7%'}}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        case 4:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ right: '68%', height: '105%', top: '2%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '48%', width: '65%', left: '41%', top: '45%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '20%' , paddingTop: '7%'}}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        case 5:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ left: '39%', height: '105%', top: '2%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '48%', width: '77%', right: '7%', top: '47%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '7%' , paddingRight: '30%', paddingTop: '7%'}}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        case 6:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ right: '72%', height: '93%', top: '39%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '48%', width: '61%', left: '44%', top: '78%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '15%' , paddingTop: '7%'}}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        case 7:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ left: '38%', height: '95%', top: '30%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '40%', width: '73%', right: '7%', top: '64%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '7%' , paddingTop: '7%'}}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+        default:
+            return (
+                <CardContainer>
+                    <PlayerContainer style={{ left: '5%', height: '90%', bottom: '20%' }}>
+                        <PlayerImage src={players[props.index]} />
+                    </PlayerContainer>
+                    <TextContainer style={{ height: '30%', width: '92%', left: '4%', top: '60%' }}>
+                        <a href={url}>
+                            <TextBox style={{ paddingLeft: '20%' }}><b>{title} {byline}</b></TextBox>
+                        </a>
+                    </TextContainer>
+                </CardContainer>
+            )
+    }
 }
 
 export default MobilePlayerCard;
