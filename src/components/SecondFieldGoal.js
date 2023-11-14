@@ -16,9 +16,11 @@ const TextBox = styled.div`
 `;
 
 const FieldGoalImage = styled.img`
-    padding-top: 0px;
-    margin-top: 0px; 
-    margin-bottom: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 100px; 
+    margin-top: 0px;
+    width: 95%;
+    max-width: 956px;
 `;
 
 const SecondFieldGoal = (props) => {
