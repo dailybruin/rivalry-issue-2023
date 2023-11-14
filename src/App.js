@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import './App.css';
 import Header from './components/Header';
+import Landing from './components/Landing';
 import Footer from './components/Footer';
 import Field from './components/Field';
 import FirstFieldGoal from "./components/FirstFieldGoal";
@@ -35,13 +36,20 @@ function App() {
   //   </div>
   // );
 
+  const BG = styled.div`
+    background: #5A8124;
+  `
+
   return (
     <div className="App">
+      <BG>
       <Header/>
+      <Landing props={testdata}/>
       <FirstFieldGoal/>
       <Field articles={testdata}/>
       <SecondFieldGoal/>
       <Footer/>
+      </BG>
     </div>
   );
 }
