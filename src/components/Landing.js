@@ -3,6 +3,20 @@ import styled from 'styled-components'
 import DBLogo from '../images/DailyBruinLogo.svg'
 import { colors } from '../shared/config'
 
+const Container = styled.div`
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  background: #D9D9D9;
+  border-bottom: #D9D9D9;
+`;
+
+const Illo = styled.img`
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+`;
+
 const Credits=styled("div")`
     background: #5A8124;
 
@@ -11,19 +25,18 @@ const Credits=styled("div")`
       margin: 0;
       font-size: 15px;
       text-align: right;
-      margin-right: 300px;
       font-family: 'Inria Serif', serif;
     }
 `;
 
 const Landing = (props) => {
   return (
-    <div>
+    <Container>
+      <Illo src={props.data.landing_image}></Illo>
       <Credits>
-      <img src={props.landing_image}></img>
-        <h1>{props.landing_credits}</h1>
+        <h1>{props.data.landing_credits}</h1>
       </Credits>
-    </div>
+    </Container>
   )
 }
 

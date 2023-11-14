@@ -9,45 +9,37 @@ import FirstFieldGoal from "./components/FirstFieldGoal";
 import SecondFieldGoal from "./components/SecondFieldGoal";
 
 function App() {
-  // const [ data, setData ] = useState(null);
+   const [ data, setData ] = useState(null);
 
-  const testdata = [
-    {article_title: "Article 1", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
-    {article_title: "Article 2", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: ""},
-    {article_title: "Article 3", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
-    {article_title: "Article 4", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
-    {article_title: "Article 5", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
-    {article_title: "Article 6", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
-    {article_title: "Article 7", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
-    {article_title: "Article 8", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"}
-  ]
+  // const testdata = [
+  //   {article_title: "Article 1", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+  //   {article_title: "Article 2", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: ""},
+  //   {article_title: "Article 3", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+  //   {article_title: "Article 4", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+  //   {article_title: "Article 5", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+  //   {article_title: "Article 6", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+  //   {article_title: "Article 7", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"},
+  //   {article_title: "Article 8", article_url: "https://www.google.com", article_byline: "words words words words words words words words words words words words words words words", article_author: "Joe Bruin"}
+  // ]
   
-  // useEffect(() => {
-	// 	fetch("<TODO: insert api url here>")
-	// 	.then(res => res.json())
-	// 	.then(res => setData(res.data['article.aml']))
-  // }, [])
-
-  // return data && (
-  //   <div className="App">
-  //     <Header/>
-  //     Hello Daily Bruin!
-  //     <Footer/>
-  //   </div>
-  // );
+  useEffect(() => {
+		fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/rivalry-issue-2023")
+		.then(res => res.json())
+		.then(res => setData(res.data['article.aml']))
+  }, [])
 
   const BG = styled.div`
     background: #5A8124;
   `
 
-  return (
+  return data && (
     <div className="App">
       <BG>
       <Header/>
-      <Landing props={testdata}/>
-      <FirstFieldGoal/>
-      <Field articles={testdata}/>
-      <SecondFieldGoal/>
+      <Landing data={data}></Landing>
+      <FirstFieldGoal text={data.first_field_goal[0]}/>
+      <Field articles={data.articles}></Field>
+      <SecondFieldGoal interactive={data.second_field_goal[0]}/>
       <Footer/>
       </BG>
     </div>

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import first_fg from "../images/SecondFieldGoal.png"
+import { mediaQueries } from '../shared/config';
+import first_fg from "../images/FieldGoal.png"
 
 const ImageContainer = styled.div`
     background-color: #5A8124;
@@ -7,26 +8,39 @@ const ImageContainer = styled.div`
     position: relative;
 `;
 
-const TextBox = styled.div`
+const ImageBox = styled.img`
+    margin-top: 15%;
+    margin-left: 22%;
     display: flex;
     position: absolute;
-    width: 800px; 
-    height: 305px; 
+    max-width: 80%; 
+    max-height: 80%; 
     color: white; 
+    ${mediaQueries.mobile}{
+        margin-top: 50%;
+        margin-left: 14%;
+        max-width: 73%;
+        max-height: 73%;
+    }
 `;
 
 const FieldGoalImage = styled.img`
-    padding-top: 0px;
-    margin-top: 0px; 
-    margin-bottom: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 100px; 
+    margin-top: -50px;
+    transform: rotate(180deg);
+    ${mediaQueries.mobile}{
+        height: 500px;
+        width: 300px;
+    }
 `;
 
 const SecondFieldGoal = (props) => {
+    const interactive = props.interactive.interactive
     return (
         <>
         <ImageContainer>
-        <TextBox> 
-        </TextBox>
+        <ImageBox src={interactive}/>
         <FieldGoalImage src={first_fg}/>
         </ImageContainer>
         </>

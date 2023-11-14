@@ -66,7 +66,6 @@ const LeftPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
-    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -76,8 +75,8 @@ const LeftPlayerCard = (props) => {
             <TextContainer style={{ height: '30%', width: '62%', left: '28%', top: '40%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingLeft: '22%' }}>
-                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
-                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
+                        <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
                 </a>
             </TextContainer>
@@ -89,7 +88,6 @@ const RightPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
-    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -99,8 +97,8 @@ const RightPlayerCard = (props) => {
             <TextContainer style={{ height: '30%', width: '62%', left: '15%', top: '30%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingRight: '15%' }}>
-                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
-                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
+                        <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
                 </a>
             </TextContainer>
@@ -112,7 +110,6 @@ const FirstPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
-    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -122,8 +119,8 @@ const FirstPlayerCard = (props) => {
             <TextContainer style={{ height: '30%', width: '70%', left: '10%', top: '30%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingRight: '20%' }}>
-                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
-                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
+                        <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
                     
                 </a>
@@ -136,7 +133,6 @@ const SecondPlayerCard = (props) => {
     const title = props.article.article_title;
     const url = props.article.article_url;
     const byline = props.article.article_byline;
-    const author = props.article.article_author;
 
     return (
         <CardContainer>
@@ -146,8 +142,8 @@ const SecondPlayerCard = (props) => {
             <TextContainer style={{ height: '30%', width: '60%', left: '30%', top: '35%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingLeft: '20%' }}>
-                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title} {byline}</div>
-                        {author.length > 0 ? <div style={{ marginTop: '2%', fontWeight: '300' }}>{"By " + author}</div> : null}
+                        <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
+                        <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
                 </a>
             </TextContainer>
