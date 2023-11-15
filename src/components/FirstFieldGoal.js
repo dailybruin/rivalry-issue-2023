@@ -11,10 +11,9 @@ const ImageContainer = styled.div`
 const TextBox = styled.div`
     display: flex;
     position: absolute;
-    margin-top: 12%;
-    margin-left: 22%;
-    width: 800px; 
-    height: 305px; 
+    top: 22%;
+    left: 22%;
+    width: 55%;
     color: white; 
     font-family: 'Inria Serif', serif;
     font-size: 30px;
@@ -43,8 +42,8 @@ const FirstFieldGoal = (props) => {
     return (
         <>
         <ImageContainer>
-        <TextBox> {blurb}</TextBox>
-        <FieldGoalImage src={first_fg}/>
+            <FieldGoalImage src={first_fg}/>
+            <TextBox> {blurb} </TextBox>
         </ImageContainer>
         </>
     )

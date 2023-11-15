@@ -9,13 +9,13 @@ const ImageContainer = styled.div`
 `;
 
 const ImageBox = styled.img`
-    margin-top: 15%;
-    margin-left: 22%;
-    display: flex;
     position: absolute;
-    max-width: 80%; 
-    max-height: 80%; 
-    color: white; 
+    top: 32%;
+    left: 21%;
+    max-width: 60%; 
+    // max-height: 80%; 
+    display: flex;
+
     ${mediaQueries.mobile}{
         margin-top: 50%;
         margin-left: 14%;
@@ -40,8 +40,8 @@ const SecondFieldGoal = (props) => {
     return (
         <>
         <ImageContainer>
-        <ImageBox src={interactive}/>
-        <FieldGoalImage src={first_fg}/>
+            <FieldGoalImage src={first_fg}/>
+            <ImageBox src={interactive}/>
         </ImageContainer>
         </>
     )
