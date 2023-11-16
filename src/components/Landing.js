@@ -20,10 +20,10 @@ const Illo = styled.img`
 const Credits=styled("div")`
     background: #5A8124;
 
-    h1 {
+    div {
       color: white;
-      margin: 0;
-      font-size: 15px;
+      margin-right: 1em;
+      font-size: 17px;
       text-align: right;
       font-family: 'Inria Serif', serif;
     }
@@ -34,7 +34,7 @@ const Landing = (props) => {
     <Container>
       <Illo src={props.data.landing_image}></Illo>
       <Credits>
-        <h1>{props.data.landing_credits}</h1>
+        <div>{props.data.landing_credits}</div>
       </Credits>
     </Container>
   )
