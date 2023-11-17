@@ -72,7 +72,7 @@ const LeftPlayerCard = (props) => {
             <PlayerContainer style={{ left: '5%' }}>
                 <PlayerImage src={players[props.index]} />
             </PlayerContainer>
-            <TextContainer style={{ height: '30%', width: '62%', left: '28%', top: '40%' }}>
+            <TextContainer style={{ height: '25%', width: '62%', left: '28%', top: '40%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingLeft: '27%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
@@ -94,7 +94,7 @@ const RightPlayerCard = (props) => {
             <PlayerContainer style={{ left: '60%' }}>
                 <PlayerImage src={players[props.index]} />
             </PlayerContainer>
-            <TextContainer style={{ height: '30%', width: '62%', left: '15%', top: '30%' }}>
+            <TextContainer style={{ height: '25%', width: '62%', left: '15%', top: '30%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingRight: '20%', paddingLeft: '10%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
@@ -116,7 +116,7 @@ const FirstPlayerCard = (props) => {
             <PlayerContainer style={{ left: '50%', height: '85%', bottom: '15%' }}>
                 <PlayerImage src={players[props.index]} />
             </PlayerContainer>
-            <TextContainer style={{ height: '30%', width: '70%', left: '10%', top: '30%' }}>
+            <TextContainer style={{ height: '25%', width: '70%', left: '10%', top: '30%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingRight: '30%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
@@ -139,7 +139,7 @@ const SecondPlayerCard = (props) => {
             <PlayerContainer style={{ left: '5%', height: '80%', bottom: '0%' }}>
                 <PlayerImage src={players[props.index]} />
             </PlayerContainer>
-            <TextContainer style={{ height: '30%', width: '60%', left: '30%', top: '35%' }}>
+            <TextContainer style={{ height: '25%', width: '60%', left: '30%', top: '35%' }}>
                 <a href={url}>
                     <TextBox style={{ paddingLeft: '28%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>

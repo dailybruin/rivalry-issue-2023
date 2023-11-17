@@ -44,10 +44,12 @@ const Desktop = (props) => {
                     {
                         index == 0 ? <FirstPlayerCard article={element} index={index} /> :
                             (index == 1 ? <SecondPlayerCard article={element} index={index} /> :
-                                (index % 2 == 0 ?
-                                    <LeftPlayerCard article={element} index={index} /> :
-                                    <RightPlayerCard article={element} index={index} />
-                                )
+                                // (index == 5 ? <LeftPlayerCard article={element} index={index} /> :
+                                    (index % 2 == 0 ?
+                                        <LeftPlayerCard article={element} index={index} /> :
+                                        <RightPlayerCard article={element} index={index} />
+                                    )
+                                // )
                             )
                     }
                 </CardContainer>

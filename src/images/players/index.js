@@ -7,6 +7,6 @@ import player6 from './player6.png'
 import player7 from './player7.png'
 import player8 from './player8.png'
 
-const players = [player1, player2, player3, player4, player5, player6, player7, player8]
+const players = [player3, player2, player1, player4, player5, player6, player7, player8]
 
 export default players
