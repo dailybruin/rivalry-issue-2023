@@ -20,8 +20,8 @@ const TextBox = styled.div`
     text-align: justify;
 
     ${mediaQueries.mobile}{
-        margin-top: 35%;
-        margin-left: 19%;
+        margin-top: 8%;
+        margin-left: -2%;
         width: 60%;
         font-size: 16px;
     }
