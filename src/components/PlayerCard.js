@@ -74,7 +74,7 @@ const LeftPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '62%', left: '28%', top: '40%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingLeft: '22%' }}>
+                    <TextBox style={{ paddingLeft: '27%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
                         <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
@@ -96,7 +96,7 @@ const RightPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '62%', left: '15%', top: '30%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingRight: '15%' }}>
+                    <TextBox style={{ paddingRight: '20%', paddingLeft: '10%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
                         <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
@@ -118,7 +118,7 @@ const FirstPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '70%', left: '10%', top: '30%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingRight: '20%' }}>
+                    <TextBox style={{ paddingRight: '30%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
                         <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
@@ -141,7 +141,7 @@ const SecondPlayerCard = (props) => {
             </PlayerContainer>
             <TextContainer style={{ height: '30%', width: '60%', left: '30%', top: '35%' }}>
                 <a href={url}>
-                    <TextBox style={{ paddingLeft: '20%' }}>
+                    <TextBox style={{ paddingLeft: '28%' }}>
                         <div style={{ maxHeight: '80%', overflow: 'hidden' }}>{title}</div>
                         <div style={{ marginTop: '2%', fontWeight: '300' }}>{byline}</div>
                     </TextBox>
