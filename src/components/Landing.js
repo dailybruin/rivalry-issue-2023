@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import DBLogo from '../images/DailyBruinLogo.svg'
 import { colors } from '../shared/config'
+import GIF from '../images/giphy.gif'
 
 const Container = styled.div`
   width: 100%;
@@ -13,7 +14,7 @@ const Container = styled.div`
 
 const Illo = styled.img`
   width: 100vw;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
 `;
 
@@ -32,7 +33,7 @@ const Credits=styled("div")`
 const Landing = (props) => {
   return (
     <Container>
-      <Illo src={props.data.landing_image}></Illo>
+      <Illo src={GIF}></Illo>
       <Credits>
         <div>{props.data.landing_credits}</div>
       </Credits>
